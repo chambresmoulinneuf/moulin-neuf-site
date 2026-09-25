@@ -131,5 +131,28 @@
   "GoogleMap": {
     "NotConfigured": "Map location not configured",
     "Title": "Google Maps Location"
+  },
+  "Meta": {
+    "OgImageAlt": "Chambres Moulin Neuf, a 1900s Maison de Maître in Civray",
+    "Home": {
+      "Title": "Bed & Breakfast in Civray, Vienne | Chambres Moulin Neuf",
+      "Description": "Two double rooms with private shower rooms in a 1900s Maison de Maître on the Charente river in Civray. From 60€ per night, pets welcome. Book direct."
+    },
+    "Contact": {
+      "Title": "Room Rates & Booking Enquiries",
+      "Description": "Nightly and weekly rates for our two double rooms in Civray, plus breakfast, pet and station pick-up extras. Send a booking request, we aim to reply same day."
+    },
+    "Location": {
+      "Title": "Civray Location, Amenities & Travel",
+      "Description": "Civray sits on the Charente river between Poitiers and Angoulême. Markets, cafés, riverside walks and a pool nearby, just off the RN10. How to get here."
+    },
+    "PrivacyPolicy": {
+      "Title": "Privacy Policy",
+      "Description": "How Chambres Moulin Neuf handles the personal data you send through our booking enquiry form, how long we keep it, and your rights under GDPR."
+    },
+    "MentionsLegales": {
+      "Title": "Legal Notice",
+      "Description": "Legal notice (mentions légales) for the Chambres Moulin Neuf website: publisher, host and intellectual property information for this chambre d'hôtes site."
+    }
   }
 }

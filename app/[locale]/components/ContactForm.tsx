@@ -35,9 +35,9 @@ export default function ContactForm() {
   return (
     <section id="contact" className="py-20 px-6 md:px-10 lg:px-36 bg-white">
       <div className="max-w-[800px] mx-auto">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-forest tracking-tight">
+        <h1 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-forest tracking-tight">
           {t('Title')}
-        </h2>
+        </h1>
 
         <div className="space-y-4 text-base text-ink/80 leading-relaxed tracking-tight mb-12">
           <p>{t('IntroPara')}</p>
