@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
           {isFr ? 'Politique de confidentialité' : 'Privacy Policy'}
         </h1>
         <p className="text-sm text-ink/60 mb-12">
-          {isFr ? 'Dernière mise à jour : 15 septembre 2026' : 'Last updated: 15 September 2026'}
+          {isFr ? 'Dernière mise à jour : 23 septembre 2026' : 'Last updated: 23 September 2026'}
         </p>
 
         {isFr ? <FrContent /> : <EnContent />}
@@ -130,6 +130,13 @@ function FrContent() {
           qui mémorise simplement si vous consultez le site en français ou en anglais. Conforme aux
           recommandations de la CNIL, ce cookie ne nécessite pas votre consentement préalable et
           aucune bannière n&apos;est donc affichée.
+        </p>
+        <p>
+          La page d&apos;accueil propose des vidéos hébergées sur YouTube (Google). Elles ne sont
+          chargées que si vous cliquez sur lecture, via le mode de confidentialité renforcée de
+          YouTube (youtube-nocookie.com). Aucune donnée n&apos;est transmise à YouTube tant que vous
+          ne lancez pas une vidéo ; une fois lancée, YouTube peut traiter certaines données (adresse
+          IP, lecture) selon sa propre politique de confidentialité.
         </p>
       </Section>
 
@@ -248,6 +255,12 @@ function EnContent() {
           one, <code>NEXT_LOCALE</code>, which simply remembers whether you&apos;re browsing the
           site in French or English. In line with CNIL guidance, this kind of cookie does not
           require prior consent, so no cookie banner is shown.
+        </p>
+        <p>
+          The home page includes videos hosted on YouTube (Google). They only load if you press
+          play, using YouTube&apos;s privacy-enhanced mode (youtube-nocookie.com). Nothing is sent
+          to YouTube until you start a video; once you do, YouTube may process some data (such as
+          your IP address and playback activity) under its own privacy policy.
         </p>
       </Section>
 

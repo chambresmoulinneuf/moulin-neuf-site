@@ -1,6 +1,7 @@
 import Hero from './components/Hero';
 import Welcome from './components/Welcome';
 import Spaces from './components/Spaces';
+import VideoTour from './components/VideoTour';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Welcome />
       <Spaces />
+      <VideoTour />
     </main>
   );
 }
