@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { BASE_URL, SITE_NAME, localeUrl } from '../../../src/seo';
 
-// Structured data for search engines (schema.org BedAndBreakfast)
+// Structured data for search engines (schema.org LodgingBusiness: no breakfast, so not BedAndBreakfast)
 export default async function JsonLd({ locale }: { locale: string }) {
   const meta = await getTranslations({ locale, namespace: 'Meta' });
   const spaces = await getTranslations({ locale, namespace: 'Spaces' });
@@ -22,7 +22,7 @@ export default async function JsonLd({ locale }: { locale: string }) {
 
   const data = {
     '@context': 'https://schema.org',
-    '@type': 'BedAndBreakfast',
+    '@type': 'LodgingBusiness',
     '@id': `${BASE_URL}/#business`,
     name: SITE_NAME,
     description: meta('Home.Description'),
@@ -44,7 +44,7 @@ export default async function JsonLd({ locale }: { locale: string }) {
       addressCountry: 'FR',
     },
     areaServed: ['Civray', 'Vienne', 'Nouvelle-Aquitaine'],
-    priceRange: '55€ - 80€',
+    priceRange: '60€ - 80€',
     currenciesAccepted: 'EUR',
     checkinTime: '16:00',
     checkoutTime: '11:00',
@@ -53,7 +53,6 @@ export default async function JsonLd({ locale }: { locale: string }) {
     availableLanguage: ['en', 'fr'],
     amenityFeature: [
       { '@type': 'LocationFeatureSpecification', name: 'Private shower room', value: true },
-      { '@type': 'LocationFeatureSpecification', name: 'Breakfast available', value: true },
       { '@type': 'LocationFeatureSpecification', name: 'Guest kitchen', value: true },
       { '@type': 'LocationFeatureSpecification', name: 'Garden with river views', value: true },
       { '@type': 'LocationFeatureSpecification', name: 'Free on-street parking', value: true },
@@ -62,8 +61,9 @@ export default async function JsonLd({ locale }: { locale: string }) {
       '@type': 'OfferCatalog',
       name: spaces('Title'),
       itemListElement: [
+        // Lowest nightly rate (Nov–Feb, Mon–Thu), matching the "From …€/night" on the room cards
         room('ChambreTitle', 'ChambreDesc', 60, 'Double'),
-        room('PontTitle', 'PontDesc', 70, 'Queen'),
+        room('PontTitle', 'PontDesc', 65, 'Queen'),
       ],
     },
     sameAs: ['https://www.youtube.com/@ChambresMoulinNeuf'],

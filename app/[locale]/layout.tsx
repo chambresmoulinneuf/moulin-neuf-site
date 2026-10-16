@@ -40,12 +40,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
     description: t('Home.Description'),
     keywords: [
-      'chambre d\'hôtes Civray', 'chambres d\'hôtes Civray', 'chambre d\'hôtes Vienne',
-      'chambre d\'hôtes Poitou', 'hébergement Civray', 'maison d\'hôtes Civray',
-      'chambre d\'hôtes animaux acceptés', 'chambre d\'hôtes près de la RN10',
-      'B&B Civray', 'bed and breakfast Civray', 'bed and breakfast Vienne France',
-      'B&B Nouvelle-Aquitaine', 'accommodation Civray', 'pet friendly B&B France',
-      'B&B near RN10', 'B&B between Poitiers and Angoulême',
+      'chambres chez l\'habitant Civray', 'chambre à louer Civray', 'hébergement Civray',
+      'hébergement Vienne', 'hébergement Poitou', 'hébergement animaux acceptés',
+      'hébergement près de la RN10', 'guest rooms Civray', 'accommodation Civray',
+      'accommodation Vienne France', 'accommodation Nouvelle-Aquitaine',
+      'pet friendly accommodation France', 'accommodation near RN10',
+      'accommodation between Poitiers and Angoulême',
     ],
     authors: [{ name: SITE_NAME }],
     other: {

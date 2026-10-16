@@ -20,6 +20,3 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://www.chambresmoulinneuf.fr/sitemap.xml
-
-# LLM context file
-LLMs: https://www.chambresmoulinneuf.fr/llms.txt
