@@ -1,0 +1,22 @@
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# AI Search Crawlers (allow for AI search visibility)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.chambresmoulinneuf.fr/sitemap.xml
