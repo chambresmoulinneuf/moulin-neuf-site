@@ -11,6 +11,7 @@ const videos = [
   { id: 'oWRnuutpZg4', titleKey: 'MoulinTitle', thumbnail: '/images/CMN-video-moulin.webp' },
   { id: 'Te_KxXzDzVc', titleKey: 'PontTitle', thumbnail: '/images/CMN-video-pont.webp' },
   { id: 'MKE97-1Y_go', titleKey: 'DiningTitle', thumbnail: '/images/CMN-video-dining.webp' },
+  { id: '_dP6so_P9es', titleKey: 'StaircaseTitle', thumbnail: '/images/CMN-video-staircase.webp' },
 ];
 
 export default function VideoTour() {
@@ -30,8 +31,8 @@ export default function VideoTour() {
           </p>
         </div>
 
-        {/* Videos (vertical Shorts): swipeable row on mobile, 3-column grid from md */}
-        <div className="flex md:grid md:grid-cols-3 gap-6 md:gap-8 max-w-[960px] overflow-x-auto md:overflow-visible snap-x snap-mandatory -mx-6 px-6 md:mx-auto md:px-0 pb-2">
+        {/* Videos (vertical Shorts): swipeable row on mobile, 4-column grid from md (lg: avoided, see globals.css breakpoint note) */}
+        <div className="flex md:grid md:grid-cols-4 gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory -mx-6 px-6 md:mx-auto md:px-0 pb-2">
           {videos.map((video) => (
             <div key={video.id} className="flex flex-col shrink-0 w-[70%] sm:w-[45%] md:w-auto snap-center">
               <div className="relative aspect-[9/16] rounded-lg overflow-hidden bg-ink">

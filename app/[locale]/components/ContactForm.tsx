@@ -54,17 +54,26 @@ export default function ContactForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-6">
             <div>
               <h4 className="text-base font-semibold text-forest tracking-tight mb-2">{t('RatesChambreLabel')}</h4>
-              <p className="text-sm text-ink/80 leading-relaxed tracking-tight">{t('RatesChambreStandard')}</p>
-              <p className="text-sm text-ink/80 leading-relaxed tracking-tight">{t('RatesChambrePeak')}</p>
+              {(['Mid', 'Summer', 'Winter'] as const).map((season) => (
+                <p key={season} className="text-sm text-ink/80 leading-relaxed tracking-tight mb-2">
+                  <span className="font-semibold">{t(`RatesSeason${season}`)}</span><br />
+                  {t(`RatesChambre${season}`)}
+                </p>
+              ))}
             </div>
             <div>
               <h4 className="text-base font-semibold text-forest tracking-tight mb-2">{t('RatesPontLabel')}</h4>
-              <p className="text-sm text-ink/80 leading-relaxed tracking-tight">{t('RatesPontStandard')}</p>
-              <p className="text-sm text-ink/80 leading-relaxed tracking-tight">{t('RatesPontPeak')}</p>
+              {(['Mid', 'Summer', 'Winter'] as const).map((season) => (
+                <p key={season} className="text-sm text-ink/80 leading-relaxed tracking-tight mb-2">
+                  <span className="font-semibold">{t(`RatesSeason${season}`)}</span><br />
+                  {t(`RatesPont${season}`)}
+                </p>
+              ))}
             </div>
           </div>
           <div className="space-y-1 pt-4 border-t border-sage/20">
-            <p className="text-sm text-ink/80 tracking-tight">{t('ExtrasBreakfast')}</p>
+            {/* Breakfast charge dropped (Clive, 27 Sept 2026) — whether breakfast is still offered at all is to be confirmed */}
+            {/* <p className="text-sm text-ink/80 tracking-tight">{t('ExtrasBreakfast')}</p> */}
             <p className="text-sm text-ink/80 tracking-tight">{t('ExtrasPets')}</p>
             <p className="text-sm text-ink/80 tracking-tight">{t('ExtrasPickup')}</p>
           </div>

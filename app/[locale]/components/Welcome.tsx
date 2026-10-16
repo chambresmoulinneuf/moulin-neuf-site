@@ -50,17 +50,18 @@ export default function Welcome() {
             type="button"
             onClick={() =>
               setLightbox({
-                images: [{ src: '/images/CMN-maison-et-jardin.jpg', alt: 'Chambres Moulin Neuf - house and garden' }],
+                images: [{ src: '/images/CMN-facade-simca1.jpg', alt: 'Chambres Moulin Neuf - facade' }],
                 index: 0,
               })
             }
             className="w-full h-96 rounded-lg overflow-hidden relative group cursor-zoom-in"
           >
+            {/* Positioned to keep the Simca and front door in frame and crop the neighbouring wall on the left edge */}
             <Image
-              src="/images/CMN-maison-et-jardin.jpg"
-              alt="Chambres Moulin Neuf - house and garden"
+              src="/images/CMN-facade-simca1.jpg"
+              alt="Chambres Moulin Neuf - facade"
               fill
-              className="object-cover object-left group-hover:scale-105 transition-transform duration-300"
+              className="object-cover object-[35%_center] group-hover:scale-105 transition-transform duration-300"
             />
           </button>
         </div>
