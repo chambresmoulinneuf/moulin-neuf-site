@@ -37,9 +37,9 @@ export default function NavBar({ locale }: { locale: string }) {
               />
             </div>
             <div>
-              <h1 className="text-sm sm:text-xl font-bold text-forest tracking-tight leading-4 sm:leading-7 whitespace-nowrap">
+              <p className="text-sm sm:text-xl font-bold text-forest tracking-tight leading-4 sm:leading-7 whitespace-nowrap">
                 {t('SiteName')}
-              </h1>
+              </p>
               <p className="text-[10px] sm:text-xs font-light text-sage tracking-tight leading-4">
                 {t('Tagline')}
               </p>
