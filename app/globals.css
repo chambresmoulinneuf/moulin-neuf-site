@@ -124,3 +124,52 @@ html {
 .btn-primary:hover {
   background: var(--sage-green-hover);
 }
+
+/* Moving beam border (BeamBorder.tsx). The ring is masked to a thin band
+   around the edge; inside it an oversized conic-gradient square spins with
+   transform: rotate only, so Chrome runs it on the compositor and it stays
+   smooth even while the main thread is busy (offset-path/@property versions
+   repaint every frame and stutter). */
+.btn-primary {
+  position: relative;
+}
+
+.beam-border {
+  --beam-width: 1px;
+  --beam-duration: 3s;
+  --beam-head: #FFFDF6;
+  --beam-tail: #B9D3BE;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: var(--beam-width) solid transparent;
+  pointer-events: none;
+  mask-image: linear-gradient(transparent, transparent), linear-gradient(#000, #000);
+  mask-clip: padding-box, border-box;
+  mask-composite: intersect;
+}
+
+.beam-border::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 150%;
+  aspect-ratio: 1;
+  background: conic-gradient(transparent 0deg 290deg, var(--beam-tail) 335deg, var(--beam-head) 360deg);
+  transform: translate(-50%, -50%) rotate(0deg);
+  will-change: transform;
+  animation: beam-spin var(--beam-duration) linear infinite;
+}
+
+@keyframes beam-spin {
+  to {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .beam-border {
+    display: none;
+  }
+}

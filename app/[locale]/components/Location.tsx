@@ -6,6 +6,7 @@ import { Link } from '../../../src/i18n/navigation';
 import { Navigation, TrainFront, Plane, Car } from 'lucide-react';
 import Image from 'next/image';
 import PhotoLightbox, { type LightboxImage } from './PhotoLightbox';
+import BeamBorder from './BeamBorder';
 
 const transportItems = [
   { icon: Navigation, textKey: 'TransportRoad' },
@@ -84,6 +85,7 @@ export default function Location() {
           <div className="text-center">
             <Link href="/contact" className="btn-primary">
               {t('ExploreButton')}
+              <BeamBorder />
             </Link>
           </div>
         </div>

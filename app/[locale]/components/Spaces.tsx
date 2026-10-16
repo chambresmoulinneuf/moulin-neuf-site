@@ -6,6 +6,7 @@ import { Link } from '../../../src/i18n/navigation';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import PhotoLightbox, { type LightboxImage } from './PhotoLightbox';
+import BeamBorder from './BeamBorder';
 
 const rooms = [
   {
@@ -115,6 +116,7 @@ export default function Spaces() {
         <div className="text-center">
           <Link href="/contact" className="btn-primary">
             {t('ViewAllSpaces')}
+            <BeamBorder />
           </Link>
         </div>
 
