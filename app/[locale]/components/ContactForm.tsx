@@ -72,7 +72,7 @@ export default function ContactForm() {
             </div>
           </div>
           <div className="space-y-1 pt-4 border-t border-sage/20">
-            {/* Breakfast charge dropped (Clive, 27 Sept 2026) — whether breakfast is still offered at all is to be confirmed */}
+            {/* Breakfast no longer offered (Clive, 16 Oct 2026); guests have the kitchen instead */}
             {/* <p className="text-sm text-ink/80 tracking-tight">{t('ExtrasBreakfast')}</p> */}
             <p className="text-sm text-ink/80 tracking-tight">{t('ExtrasPets')}</p>
             <p className="text-sm text-ink/80 tracking-tight">{t('ExtrasPickup')}</p>
